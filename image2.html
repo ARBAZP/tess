@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+         margin: 0;
+        padding: 0;
+        box-sizing: border-box; 
+        }
+        .container{
+            background-color: black;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .detail{
+          background-color: aliceblue;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+            width: 500px;
+            height: 500px;
+            border-radius: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="detail">
+            <p style="font-size: 4rem;">detail</p>
+            <br><br><br>
+            <p style="font-size: 3.5rem;" ><span id="fullname"> </span></p>
+            <br>
+            <p  style="font-size: 3.5rem;" ><span id="fullusername"> </span></p>
+        </div>
+    </div>
+    <script>
+       let name=sessionStorage.getItem('fullname');
+      let username= sessionStorage.getItem('fullusername');
+
+     document.getElementById('fullname').textContent=name;
+     document.getElementById('fullusername').textContent=username;
+
+    </script>
+</body>
+</html>
